@@ -1,0 +1,225 @@
+# --- General options --- #
+
+# Name of website
+title: Amal S Sebastian
+
+# Short description of your site
+description: Let me introduce you to my geek side!
+
+# Your name to show in the footer
+author: Amal S Sebastian
+
+# --- Local development options ---
+# If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
+# *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
+
+# url is the the website domain URL without a trailing slash
+# url: "https://www.anudit.in/"
+
+# baseurl should be an empty string
+baseurl: ""
+
+#For my changes
+# use meta-title: for the center heading of the page.
+# use title: to set the <title> of the web page.
+# use subtitle: to set the sub heading for that title(meta-title). NOTE: if(meta-title exists){subtilel visiblity = true}
+
+# --- Navigation bar options --- #
+
+# List of links in the navigation bar
+navbar-links:
+  Recommends: "books"
+  Publications:
+    - A framework of smart homes connected devices using Internet of Things: "http://ieeexplore.ieee.org/document/7918794/"
+    - Google Scholar Profile: "https://scholar.google.co.in/citations?user=4p4smu0AAAAJ"
+    - ResearchGate Profile: "https://www.researchgate.net/profile/Anudit_Verma"
+  Projects:
+    - GSoC'15: "https://github.com/anuditverma/org.civicrm.osdi"
+    - Airtel Suvidha (Airtel WHack Hackathon): "https://www.linkedin.com/feed/update/activity:6273369896978087936/"
+    - Contract Reader Tool (EY Hackathon): "https://www.moneycontrol.com/news/technology/ey-hackathon-winners-develop-tax-compliance-solutions-with-automation-2439821.html"
+    - Medical Ambience App: "https://github.com/anuditverma/MAA-Avaya-Hackathon"
+    - TypeRacer: "https://github.com/anuditverma/appbase-typeracer"
+    - video.js Overlay Hyperlink: "https://www.npmjs.com/package/videojs-overlay-hyperlink"
+  About Me: "aboutme"
+  Resume | CV: "resume/amal_resume.pdf"
+#  Tags: "tags"
+
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/assets/img/amal_out.jpeg"
+round-avatar: true
+
+# If you want to have an image logo in the top-left corner instead of the title text,
+# then specify the following parameter. The logo will have a height of 40px
+# title-img: /path/to/image
+
+# --- Background colour/image options --- #
+
+# By default, the navigation bar and footer have a light gray background, and the main page
+# has a white background. You can specify a different background colour or a background image
+# for the navigation bar, the main page, and the footer.
+# navbar-col: "orange"
+# navbar-img: "/assets/img/bgimage.png"
+# footer-col: "blue"
+# footer-img: "/assets/img/bgimage.png"
+# page-col: "#FF0000"
+# page-img: "/assets/img/bgimage.png"
+
+# --- Footer options --- #
+
+# Select the social network links that you want to show in the footer.
+# Uncomment the links you want to show and add your information to each one.
+# If you don't want to show a link to an RSS feed, set rss to "false".
+social-network-links:
+  email: "amalssebastian@gmail.com"
+  facebook: profile.php?id=100018723528521
+  github: amalss18
+  # twitter: daattali
+  # rss: true
+#  reddit: yourname
+  linkedin: amal-sebastian-5bb274168/
+#  xing: yourname
+#  stackoverflow: "3943160/daattali"
+#  snapchat: deanat78
+#  instagram: deanat78
+#  youtube: user/deanat78
+#  spotify: yourname
+#  telephone: +14159998888
+#  steam: deanat78
+#  twitch: yourname
+#  yelp: yourname
+#  telegram: yourname
+#  calendly: yourname
+#  mastodon: instance.url/@username
+#  ORCID: your ORCID ID
+#  google-scholar: your google scholar
+
+# Select which share links to show in posts
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+  vk: false
+
+# How to display the link to the website in the footer
+# Remove this if you don't want a link in the footer
+# url-pretty: "www.anudit.in"
+
+# --- Web Statistics Section --- #
+
+# Fill in your Google Analytics ID to track your website using GA
+# google_analytics: ""
+
+# Google Tag Manager ID
+#gtm: ""
+
+# --- Comments --- #
+
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+# disqus: ""
+
+# To use Facebook Comments, fill in a Facebook App ID
+# fb_comment_id: ""
+
+# --- Misc --- #
+
+# Facebook App ID
+# fb_app_id: ""
+
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 50
+
+# Character used to separate site title and description in HTML document title
+# and RSS feed title
+title-separator: "-"
+
+# Ruby Date Format
+date_format: "%B %-d, %Y"
+
+# --- Don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+timezone: "Asia/Kolkata"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+      readtime: true # add estimated reading time on all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+      show-avatar: true
+
+# Use tags index page and make tags on each post clickable
+link-tags: true
+
+# Exclude these files from production site
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Vagrantfile
+
+#Meta data for your Posts
+metadata:
+  _posts:
+    - name: "layout"
+      field:
+        element: "hidden"
+        value: "post"
+    - name: "title"
+      field:
+        element: "text"
+        label: "Post title"
+        placeholder: "Title"
+        alterable: true
+    - name: "subtitle"
+      field:
+        element: "textarea"
+        label: "Subtitle"
+        placeholder: "A description of your post."
+        alterable: true
+    - name: "date"
+      field:
+        element: "text"
+        label: "Date"
+        help: "Enter date of post."
+        placeholder: "yyyy-mm-dd"
+        alterable: true
+    - name: "image"
+      field:
+        element: "text"
+        label: "Image"
+        help: "Add a thumbnail image to your post."
+        placeholder: "Thumbnail"
+        alterable: true
+    - name: "published"
+      field:
+        element: "checkbox"
+        label: "Publish"
+        help: "Check to publish post, uncheck to hide."
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2020 -->
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Are The Random Numbers Really Random?</title>
+
+  <meta name="author" content="Amal S Sebastian">
+  <meta name="theme-color" content="#a50509">
+  <meta name="description" content="Hi! I am Anudit Verma, a Computer Science engineer from USICT, New Delhi. I am currently pursuing MS in CS from California State University, Long Beach. I am a software developer, programmer, and a former GSoC student. I love to create digital art, listen to music and play video games. I am eager to meet and connect with new people at hackathons, developers’ conferences, dev-fests, and gaming meet-ups.">
+  <meta name="keywords" content="anudit, verma, geek, linux, science, math, mathematics, computer science, gsoc, google summer of code, raspberry pi, music, Internet of Things, research, android, hackathons, MS, California">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+  <!-- MathJax -->
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({messageStyle: 'none',tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
+  <link rel="alternate" type="application/rss+xml" title="Amal S Sebastian - Let me introduce you to my geek side!" href="http://localhost:4000/feed.xml">
+
+  
+  
+  
+  
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+    
+      <link rel="stylesheet" href="/assets/css/particle-js-style.css">
+    
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Are The Random Numbers Really Random?">
+  
+
+   
+  <meta property="og:description" content="“What baffles me most in the world is the mystical nature of the Universe and its ever-increasing entropy, an infinite amount of information yet to be processed and deciphered, unravelling new ways for us to get a much better understanding of it.” - Anudit Verma When you hear this term...">
+  
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Amal S Sebastian">
+  <meta property="og:article:published_time" content="2015-12-22T00:00:00+05:30">
+  
+
+  
+  <meta property="og:url" content="http://localhost:4000/2015-12-22-are-the-random-numbers-really-random/">
+  <link rel="canonical" href="http://localhost:4000/2015-12-22-are-the-random-numbers-really-random/">
+  
+
+  
+  <meta property="og:image" content="https://www.anudit.in/assets/img/math-universe.jpg">
+  
+  
+
+  <!-- Twitter summary cards -->
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  
+  <meta name="twitter:title" content="Are The Random Numbers Really Random?">
+  
+
+  
+  <meta name="twitter:description" content="“What baffles me most in the world is the mystical nature of the Universe and its ever-increasing entropy, an infinite amount of information yet to be processed and deciphered, unravelling new ways for us to get a much better understanding of it.” - Anudit Verma When you hear this term...">
+  
+
+  
+  <meta name="twitter:image" content="https://www.anudit.in/assets/img/math-universe.jpg">
+  
+
+</head>
+
+
+  <body>
+
+  <div class="mobile-js-hide">
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+  </div>
+
+    
+    
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom "><a class="navbar-brand" href="http://localhost:4000/">Amal S Sebastian</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/books">Recommends</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="http://ieeexplore.ieee.org/document/7918794/">A framework of smart homes connected devices using Internet of Things</a>
+                  <a class="dropdown-item" href="https://scholar.google.co.in/citations?user=4p4smu0AAAAJ">Google Scholar Profile</a>
+                  <a class="dropdown-item" href="https://www.researchgate.net/profile/Anudit_Verma">ResearchGate Profile</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="https://github.com/anuditverma/org.civicrm.osdi">GSoC'15</a>
+                  <a class="dropdown-item" href="https://www.linkedin.com/feed/update/activity:6273369896978087936/">Airtel Suvidha (Airtel WHack Hackathon)</a>
+                  <a class="dropdown-item" href="https://www.moneycontrol.com/news/technology/ey-hackathon-winners-develop-tax-compliance-solutions-with-automation-2439821.html">Contract Reader Tool (EY Hackathon)</a>
+                  <a class="dropdown-item" href="https://github.com/anuditverma/MAA-Avaya-Hackathon">Medical Ambience App</a>
+                  <a class="dropdown-item" href="https://github.com/anuditverma/appbase-typeracer">TypeRacer</a>
+                  <a class="dropdown-item" href="https://www.npmjs.com/package/videojs-overlay-hyperlink">video.js Overlay Hyperlink</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/resume/amal_resume.pdf">Resume | CV</a>
+          </li></ul>
+  </div>
+
+<!-- ALways use my avatar, irrespective of the post image -->
+  <div class="avatar-container">
+    <div class="avatar-img-border">
+      <a href="http://localhost:4000/">
+        <img alt="Amal's Photo" class="avatar-img" src="http://localhost:4000/assets/img/amal_out.jpeg" />
+     </a>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  	<div class="container-md">
+    	<div class="row">
+      		<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        		<div class="post-heading">
+        			<!-- A small script that takes care of visibility of "About me" (used to be meta-title but now serves as only-about-me on aboutme.md) on About me page. Displays "About me" instead of "About Anudit Verma" (title). -->
+        			<script>
+    					var flag = 0
+  					</script>
+					
+  					<script>
+            // Using page.meta-title instead of page.title to display "Hi, I'm Anudit" on the home page.
+      				if (flag != 1) {
+      					document.writeln("<h1><br/></h1>");
+      				}
+      				else if (flag == 1) {
+      					document.writeln("<h1><br/></h1>");
+      				}
+      			</script>
+
+            
+
+      	
+        	<span class="post-meta">Posted on December 22, 2015</span>
+        	
+        		<!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+
+
+
+
+
+
+  
+  <span class="reader-time post-meta"><span class="d-none d-md-inline middot">&middot;</span> 3 minute read</span>
+
+        	
+      	
+        		</div>
+      		</div>
+    	</div>
+  	</div>
+</div>
+</header>
+
+
+
+<div class="container-md">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+
+      <article role="main" class="blog-post">
+        <p><strong>“What baffles me most in the world is the mystical nature of the Universe and its ever-increasing entropy, an infinite amount of information yet to be processed and deciphered, unravelling new ways for us to get a much better understanding of it.”</strong> - Anudit Verma</p>
+
+<p>When you hear this term ‘Random’, what exactly goes into your mind? What picture do you form in your brain? Perhaps you might have thought of a number being generated out of the blue on a screen or someone drawing a numbered ball from a bowl full of them. But have you ever wondered about the randomness of the numbers being generated by a machine like computers, are they really random or not?</p>
+
+<p>A simple answer to this question is they are not, in reality, the numbers used in computer programs are <em>pseudo-random</em>, which means they are generated in a predictable fashion using a mathematical formula. This is fine for many purposes, but it may not be random in the way you expect if you’re used to dice rolls and lottery drawings. To solve this problem <a href="https://www.random.org/">RANDOM.org</a> comes to the rescue, they offer true random numbers based on the atmospheric noise, which for many purposes is better than the pseudo-random number algorithms typically used in computer programs. But is this really a true randomness are we talking about? What about the case when you can still track down to these atmospheric noises and still be able to somehow determine the outcome.</p>
+
+<p>Quick fact: <strong>About 1% of your Television’s static (white) noise of random dot pixel pattern are the remains of the afterglow of The Big Bang!</strong></p>
+
+<p>We need to widen our scope and get to the quantum level for this discussion, what could be the most non-deterministic and untraceable way to generate a truly random number? Answer to this might lies to the starting point when the Universe was created and in that process, we human beings and our world might be just an accidental creation, the location of earth, the favourable environmental conditions for sustaining life and moreover the randomness which lies within us, the different percentage of atomic composition of different elements, that made us unique from others. I think this seems to be a more convincing answer for a true randomness.</p>
+
+<p><img src="/assets/img/WHwhite.jpg" alt="Mr. Walter White from Breaking Bad" title=" Mr Walter White from Breaking Bad" /></p>
+
+<p>Good point Mr White! Now let’s bring chaos theory into this picture or we call it <strong>The Butterfly Effect</strong>, so why this name? Because now imagine this, the minor perturbations such as the flapping of the wings of a distant butterfly several weeks earlier can cause a hurricane. Woah! Right? Even though we are talking in a metaphorical sense but see a very small change in initial condition had created a significantly different outcome. The butterfly effect is exhibited by very simple systems. For example, the randomness of the outcomes of throwing dice depends on this characteristic to amplify small differences in initial conditions—the precise direction, thrust, and orientation of the throw—into significantly different dice paths and outcomes, which makes it virtually impossible to throw dice exactly the same way twice.</p>
+
+<p>The infinite Universe, entropy, randomness and chaos, let’s put all these things into a perspective of Aristotle and his attempt to explain about infinity and possibility of an order in chaos, here comes <strong>The Infinite Monkey Theorem</strong>, watch the video for an explanation.</p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ipdRhgLWGXo" allowfullscreen=""></iframe>
+</div>
+
+<p>Probably the next time you would wonder that ‘Random’ is just not a word defined for uncertainty in nature but it’s much beyond that, from the infinitesimal particles at the quantum level to the humongous objects in the Universe, and of course someday this might happen:</p>
+
+<p><img src="/assets/img/reddit-post.jpg" alt="Reddit Post" title="Reddit Post" /></p>
+
+<p>Thank you for reading.</p>
+
+<p>And one more thing, here is an amazing fact about <strong>Breaking Bad</strong>:</p>
+
+<center><img src="/assets/img/BBfact.png" /><br />
+
+<h3>MIND = *BLOWN*</h3></center>
+<p><br /></p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#probability">probability</a>
+          
+            <a href="/tags#mathematics">mathematics</a>
+          
+            <a href="/tags#science">science</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+    <a href="https://twitter.com/intent/tweet?text=Are+The+Random+Numbers+Really+Random%3F&url=http%3A%2F%2Flocalhost%3A4000%2F2015-12-22-are-the-random-numbers-really-random%2F"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fab fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F2015-12-22-are-the-random-numbers-really-random%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2015-12-22-are-the-random-numbers-really-random%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+</section>
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2015-11-14-worlds-first-webpage/" data-toggle="tooltip" data-placement="top" title="Here Is The World's First Webpage!">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="page-item next">
+          <a class="page-link" href="/2016-02-25-is-light-particle-or-wave/" data-toggle="tooltip" data-placement="top" title="Light: Particle or Wave?">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+                
+  
+  
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:amalssebastian@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.facebook.com/profile.php?id=100018723528521" title="Facebook">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Facebook</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/amalss18" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/amal-sebastian-5bb274168/" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li></ul>
+      
+      <p class="copyright text-muted">
+        Amal S Sebastian
+        &nbsp;&bull;&nbsp;
+      2020
+
+      
+      </p>
+        <!-- Please don't remove this, keep my open source work credited :) -->
+      <p class="theme-by text-muted">
+        Awesome Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+    
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+        if (typeof jQuery == 'undefined') {
+          document.write('<script src="/assets/js/jquery-3.4.1.min.js"></scr' + 'ipt>');
+        }
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/main.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/particles.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/particles-config.js"></script>
+    
+  
+
+
+
+
+
+  
+  </body>
+</html>
