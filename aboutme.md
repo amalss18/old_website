@@ -25,12 +25,12 @@ I like to code and enjoy modelling physics based problems especially in the fiel
 
 <p class="about-text">
 <span class="fa fa-heart about-icon"></span>
-Also, I am very dedicated supporter of Real Madrid, I hate missing any of their games. I also enjoy listening to music and watching videos n YouTube in my spare time.
+Also, I am very dedicated supporter of Real Madrid, I hate missing any of their games. I also enjoy listening to music and watching videos on YouTube in my spare time.
 </p>
 
 <p class="about-text">
 <span class="fa fa-envelope about-icon"></span>
-Let’s connect if you want to collab something awesome in the world of open-source tech. Follow the social media links given below or drop an e-mail <a target="_blank" href="mailto:contact@anudit.in">here</a>.
+Let’s connect if you want to collab on something awesome!
 </p>
 
 <br>
