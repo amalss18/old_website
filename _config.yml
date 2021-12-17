@@ -26,9 +26,9 @@ baseurl: ""
 
 # List of links in the navigation bar
 navbar-links:
-  Projects: "projects"
+  Research/Projects: "projects"
   Publications:
-    - PySPH: "https://arxiv.org/abs/1909.04504"
+    - PySPH: "https://dl.acm.org/doi/10.1145/3460773"
   # Projects:
   Resume | CV: "resume/Amal_Curriculum_Vitae.pdf"
 #  Tags: "tags"
@@ -168,6 +168,7 @@ exclude:
   - LICENSE
   - README.md
   - Vagrantfile
+  - vendor
 
 #Meta data for your Posts
 metadata:
